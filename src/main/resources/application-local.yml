@@ -1,0 +1,5 @@
+# Activate with: --spring.profiles.active=local
+logging:
+  level:
+    com.ezticket: DEBUG
+    org.hibernate.SQL: DEBUG

@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: ticketing-system
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ticketing
+    username: postgres
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: UTC
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+
+server:
+  port: 8080
+
+app:
+  admin-key: ${APP_ADMIN_KEY:dev-admin-key}
+
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
